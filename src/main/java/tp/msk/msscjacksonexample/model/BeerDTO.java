@@ -1,5 +1,6 @@
 package tp.msk.msscjacksonexample.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Null;
 import jakarta.validation.constraints.Positive;
@@ -17,9 +18,9 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BeerDTO {
-
+    @JsonProperty("beerId")
     @Null
-    private UUID beerId;
+    private UUID id;
 
     @NotBlank
     private String beerName;
